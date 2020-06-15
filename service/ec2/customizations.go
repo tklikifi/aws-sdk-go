@@ -25,15 +25,15 @@ func init() {
 		}
 
 		// only set the retryer on request if config doesn't have a retryer
-		if r.Config.Retryer == nil && (r.Operation.Name == opModifyNetworkInterfaceAttribute || r.Operation.Name == opAssignPrivateIpAddresses) {
-			r.Retryer = client.DefaultRetryer{
-				NumMaxRetries:    client.DefaultRetryerMaxNumRetries,
-				MinRetryDelay:    customRetryerMinRetryDelay,
-				MinThrottleDelay: customRetryerMinRetryDelay,
-				MaxRetryDelay:    customRetryerMaxRetryDelay,
-				MaxThrottleDelay: customRetryerMaxRetryDelay,
-			}
-		}
+		//if r.Config.Retryer == nil && (r.Operation.Name == opModifyNetworkInterfaceAttribute || r.Operation.Name == opAssignPrivateIpAddresses) {
+		//	r.Retryer = client.DefaultRetryer{
+		//		NumMaxRetries:    client.DefaultRetryerMaxNumRetries,
+		//		MinRetryDelay:    customRetryerMinRetryDelay,
+		//		MinThrottleDelay: customRetryerMinRetryDelay,
+		//		MaxRetryDelay:    customRetryerMaxRetryDelay,
+		//		MaxThrottleDelay: customRetryerMaxRetryDelay,
+		//	}
+		//}
 	}
 }
 
